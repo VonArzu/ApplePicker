@@ -157,6 +157,11 @@ Prefab:
       propertyPath: leftAndRightEdge
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 54438160877995568, guid: 1e0d4a902c26e684d85601cf2d8365ea,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e0d4a902c26e684d85601cf2d8365ea, type: 2}
   m_IsPrefabAsset: 0
