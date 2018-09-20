@@ -5,7 +5,7 @@ using UnityEngine.UI;               // This line enables use of uGUI features.  
 
 public class Basket : MonoBehaviour {
     [Header("Set Dynamically")]
-    public Text scoreGT;                                                        //a
+    public Text             scoreGT;                                                        //a
 
 	// Use this for initialization
 	void Start () {
@@ -46,7 +46,10 @@ public class Basket : MonoBehaviour {
                 score += 100;
                 //Convert the score back to a string and display it
                 scoreGT.text = score.ToString();
-             
+             //track the high score
+             if(score > HighScore.score){
+                    HighSCore.score = score;
+                }
             }
         }
     }

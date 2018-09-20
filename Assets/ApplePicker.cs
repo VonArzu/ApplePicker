@@ -27,6 +27,7 @@ public class ApplePicker : MonoBehaviour {
         foreach (GameObject tGo in tAppleArray){
             Destroy(tGo);
         }
+
         //Destroy of the baskets
         //Get the index of the last Basket in basketList            //e
         int basketList = basketList.Count-1;
