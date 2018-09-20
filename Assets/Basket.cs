@@ -8,9 +8,31 @@ public class Basket : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update() {
+        //Get the current screen position of the mouse from input
+        Vector3 mousePos2D = Input.mousePosition;                           //a
+
+        //The camera's position sets how far to push the mouse into 3D
+        mousePos2D.z = -Camera.main.transform.position.z;                   //b
+
+        //Convert the point from 2D screen space into 3D game world space
+        Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);    //c
+
+        //Move the x position of this Basket to the position of the mouse
+        Vector3 pos = this.transform.position;
+        pos.x = mousePos3D.x;
+        this.transform.position = pos;
+      
+    void OnCollisionEnter ( Collision coll ) {                             //a
+            //Find out what hit this basket
+            GameObject collidedWith = coll.gameObject;                      //b
+            if (collidedWith.tag == "Apple" ) {                               //c
+                Destroy(collidedWith);
+            }
+
+
+        }
+    }
 }
