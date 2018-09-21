@@ -18,6 +18,7 @@ public class ApplePicker : MonoBehaviour {
             Vector3 pos = Vector3.zero;
             pos.y = basketBottomY + (basketSpacingY * i);
             tBasketGo.transform.position = pos;
+            object basketList = basketList;
             basketList.Add(tBasketGo);                  //d
         }
       }
@@ -28,12 +29,10 @@ public class ApplePicker : MonoBehaviour {
             Destroy(tGo);
         }
 
-        //Destroy of the baskets
-        //Get the index of the last Basket in basketList            //e
-        int basketList = basketList.Count-1;
-        //Get reference to that Basket from the LIst and destrot the GameObject
-        basketList.RemoveAt(basketIndex);
-        Destroy(tBasketGo);
+     if(basketList.Count == 0)
+        {
+            SceneManager.LoadScene("_Scene_0");
+        }
 
     }
 	}
