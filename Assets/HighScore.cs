@@ -12,7 +12,6 @@ public class HighScrore : MonoBehaviour {
         {
             score = PlayerPrefs.GetInt("HighScore");
         }
-        PlayerPrefs.SetInt("HighScore", score);
 	}
 	
 	// Update is called once per frame

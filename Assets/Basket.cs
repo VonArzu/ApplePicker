@@ -51,7 +51,6 @@ public class Basket : MonoBehaviour
                     HighScore.score = score;
                 }
             }
-        }
-    
+        } 
 }
 
