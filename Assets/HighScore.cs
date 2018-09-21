@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //Remember. we need this line for uGUI to work.
 
-public class HighScrore : MonoBehaviour {
+public class HighScore : MonoBehaviour {
     static public int score = 1000;
 
 	// Use this for initialization
